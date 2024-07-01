@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage GPT-co</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #121212;
+            color: #E0E0E0;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: row;
+        }
+
+        .navbar {
+            width: 250px;
+            background-color: #1F1F1F;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: #E0E0E0;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s, color 0.3s;
+            margin: 10px 0;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #333;
+            color: #FFCC00;
+        }
+
+        .header {
+            background-color: #333;
+            color: #FFCC00;
+            padding: 40px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .main h2 {
+            text-align: center;
+            color: #FFCC00;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .chat-box {
+            background-color: #1F1F1F;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .chat-box h3 {
+            margin-top: 0;
+            color: #FFCC00;
+            font-size: 1em;
+        }
+
+        .chat-box p {
+            font-size: 1.1em;
+            color: #B0B0B0;
+        }
+
+        .input-bar, .answer-bar {
+            margin-top: 20px;
+        }
+
+        .input-bar input, .answer-bar div {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #262626;
+            color: #E0E0E0;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .input-bar input::placeholder {
+            color: #B0B0B0;
+        }
+
+        .answer-bar div {
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #333;
+            font-size: 1em;
+            text-align: center;
+            color: #B0B0B0;
+        }
+
+        .footer {
+            background-color: #1F1F1F;
+            color: #E0E0E0;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        .svg-icon {
+            width: 100px;
+            height: 100px;
+            fill: #FFCC00;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+        <a href="#home">
+            <svg class="svg-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#FFCC00">
+                <path d="M512 960c-92.8 0-160-200-160-448S419.2 64 512 64s160 200 160 448-67.2 448-160 448z m0-32c65.6 0 128-185.6 128-416S577.6 96 512 96s-128 185.6-128 416 62.4 416 128 416z" fill="#050D42"></path>
+                <path d="M124.8 736c-48-80 92.8-238.4 307.2-363.2S852.8 208 899.2 288 806.4 526.4 592 651.2 171.2 816 124.8 736z m27.2-16c33.6 57.6 225.6 17.6 424-97.6S905.6 361.6 872 304 646.4 286.4 448 401.6 118.4 662.4 152 720z" fill="#050D42"></path>
+                <path d="M899.2 736c-46.4 80-254.4 38.4-467.2-84.8S76.8 368 124.8 288s254.4-38.4 467.2 84.8S947.2 656 899.2 736z m-27.2-16c33.6-57.6-97.6-203.2-296-318.4S184 246.4 152 304 249.6 507.2 448 622.4s392 155.2 424 97.6z" fill="#050D42"></path>
+                <path d="M512 592c-44.8 0-80-35.2-80-80s35.2-80 80-80 80 35.2 80 80-35.2 80-80 80zM272 312c-27.2 0-48-20.8-48-48s20.8-48 48-48 48 20.8 48 48-20.8 48-48 48zM416 880c-27.2 0-48-20.8-48-48s20.8-48 48-48 48 20.8 48 48-20.8 48-48 48z m448-432c-27.2 0-48-20.8-48-48s20.8-48 48-48 48 20.8 48 48-20.8 48-48 48z" fill="#2F4BFF"></path>
+            </svg>
+        </a>
+    </div>
+
+    <div style="flex: 1; display: flex; flex-direction: column;">
+        <div class="header">
+            <h1>Selamat Datang di GPT-co</h1>
+        </div>
+
+        <div class="main">
+            <h2>Mari Mulai Percakapan Anda</h2>
+            <div class="chat-box">
+                <h3>Chat Sekarang</h3>
+                <p>Masukkan pesan Anda di sini untuk memulai percakapan dengan ChatGPT.</p>
+                <div class="input-bar">
+                    <input type="text" placeholder="Ketik pertanyaan Anda di sini...">
+                </div>
+                <div class="answer-bar">
+                    <div>Jawaban akan muncul di sini...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024GPT-co. Semua hak dilindungi.</p>
+        </div>
+    </div>
+</body>
+</html>
