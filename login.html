@@ -2,67 +2,119 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Login - All-Role AI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register - All-Role AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/auth.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
     <link rel="icon" href="images/favicon.png">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* CSS for Navbar */
+        .navbar {
+            background-color: #7dc22b;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <div class="container">
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>
-            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ms-auto navbar-nav-scroll">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.html">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                </ul>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a class="active" href="index.html">Home</a>
+        <a href="#" onclick="toggleForm('sign-in')">Sign In</a>
+        <a href="#" onclick="toggleForm('sign-up')">Sign Up</a>
+    </div>
+
+    <!-- Container for Forms -->
+    <div id="container" class="container sign-in">
+        <!-- FORM SECTION -->
+        <div class="row">
+            <!-- SIGN UP -->
+            <div class="col align-items-center flex-col sign-up">
+                <div class="form-wrapper align-items-center">
+                    <div class="form sign-up">
+                        <div class="input-group">
+                            <i class='bx bxs-user'></i>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <i class='bx bx-mail-send'></i>
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="input-group">
+                            <i class='bx bxs-lock-alt'></i>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded" type="submit" id="button">Sign
+                            up</button>
+                        <p>
+                            <span>Already have an account?</span>
+                            <b onclick="toggleForm('sign-in')" class="pointer">Sign in here</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- SIGN IN -->
+            <div class="col align-items-center flex-col sign-in">
+                <div class="form-wrapper align-items-center">
+                    <div class="form sign-in">
+                        <div class="input-group">
+                            <i class='bx bxs-user'></i>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <i class='bx bxs-lock-alt'></i>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded" type="submit" id="button">Sign
+                            in</button>
+                        <p>
+                            <b>Forgot password?</b>
+                        </p>
+                        <p>
+                            <span>Don't have an account?</span>
+                            <b onclick="toggleForm('sign-up')" class="pointer">Sign up here</b>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-
-    <!-- Login Section -->
-    <div id="login" class="container mt-5">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="h2-heading">Login</h2>
-                <form>
-                    <div class="form-group">
-                        <input type="email" class="form-control-input" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control-input" placeholder="Password" required>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="form-control-submit-button">Login</button>
-                    </div>
-                </form>
+        <!-- CONTENT SECTION -->
+        <div class="row content-row">
+            <!-- SIGN IN CONTENT -->
+            <div class="col align-items-center flex-col">
+                <div class="text sign-in">
+                    <h2>Welcome</h2>
+                </div>
+                <div class="img sign-in"></div>
+            </div>
+            <!-- SIGN UP CONTENT -->
+            <div class="col align-items-center flex-col">
+                <div class="img sign-up"></div>
+                <div class="text sign-up">
+                    <h2>Join with us</h2>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- Scripts -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
