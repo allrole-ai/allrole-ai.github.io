@@ -11,7 +11,7 @@ Table Of Contents:
 - Services 2
 - Services 3
 - Projects
-- Testimonials
+- Teams
 - Contact
 - Footer
 - Copyright
@@ -101,11 +101,11 @@ h6 {
 	line-height: 1.5rem;
 }
 
-.testimonial-text {
+.team-text {
 	font-style: italic;
 }
 
-.testimonial-author {
+.team-author {
 	font-weight: 600;
 	font-size: 1.25rem;
 	line-height: 1.75rem;
@@ -694,7 +694,7 @@ a:hover {
 
 
 /************************/
-/*     Testimonials     */
+/*     Teams     */
 /************************/
 .slider-1 {
 	position: relative;
@@ -730,20 +730,21 @@ a:hover {
 	background-size: 18px 28px;
 }
 
-.slider-1 .testimonial-image {
+.slider-1 .team-image {
 	width: 120px;
 	height: 120px;
 	margin-bottom: 2.25rem;
 	border-radius: 50%;
+	object-fit: cover;
 }
 
-.slider-1 .testimonial-text {
+.slider-1 .team-text {
 	margin-bottom: 1.75rem;
 	font-size: 1.25rem;
 	line-height: 2rem;
 }
 
-.slider-1 .testimonial-author {
+.slider-1 .team-author {
 	margin-bottom: 0.25rem;
 	color: #161223;
 }
@@ -961,36 +962,6 @@ a:hover {
 .ex-basic-1 .text-box {
 	padding: 1.25rem 1.25rem 0.5rem 1.25rem;
 	background-color: #f7f9fd;
-}
-
-.ex-cards-1 .card {
-	border: none;
-	background-color: transparent;
-}
-
-.ex-cards-1 .card .fa-stack {
-	width: 2em;
-	font-size: 1.125rem;
-}
-
-.ex-cards-1 .card .fa-stack-2x {
-	color: #7dc22b;
-}
-
-.ex-cards-1 .card .fa-stack-1x {
-	width: 2em;
-	color: #ffffff;
-	font-weight: 700;
-	line-height: 2.125rem;
-}
-
-.ex-cards-1 .card .list-unstyled .flex-grow-1 {
-	margin-left: 2.25rem;
-}
-
-.ex-cards-1 .card .list-unstyled .flex-grow-1 h5 {
-	margin-top: 0.125rem;
-	margin-bottom: 0.5rem;
 }
 
 
@@ -1347,13 +1318,13 @@ a:hover {
 	/* end of projects */
 
 
-	/* Testimonials */
+	/* Teams */
 	.slider-1 .slider-container {
 		width: 82%;
 		margin-right: auto;
 		margin-left: auto;
 	}
-	/* end of testimonials */
+	/* end of Teams */
 
 
 	/* Statistics */
