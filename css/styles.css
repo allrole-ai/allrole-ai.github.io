@@ -329,7 +329,8 @@ a:hover {
 
 .navbar .logo-image img {
     width: 100px;
-	height: 32px;
+		height: 32px;
+		
 }
 
 .navbar .logo-text {
@@ -338,6 +339,7 @@ a:hover {
 	font-size: 1.875rem;
 	line-height: 1rem;
 	text-decoration: none;
+	margin-left: -60px;
 }
 
 .offcanvas-collapse {
