@@ -75,4 +75,11 @@ $(document).ready(function () {
 
     // Hide loading indicator initially
     $('#loadingIndicator').hide();
+
+    // New Chat Button
+    $('#newChatButton').click(function() {
+        $('#chatBox').empty(); // Clear the chat box
+        $('#chatInput').val(''); // Clear the input field
+        $('#loadingIndicator').hide(); // Hide the loading indicator if it's visible
+    });
 });
