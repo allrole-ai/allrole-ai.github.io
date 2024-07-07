@@ -19,57 +19,56 @@ export function getTokenFromAPI() {
 }
 
 export function GetDataForm() {
-    const username = document.querySelector("#username").value;
+    const namalengkap = document.querySelector("#namalengkap").value;
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
+    const confirmpassword = document.querySelector("#confirmpassword").value;
 
     const data = {
-        username: username,
+        namalengkap: namalengkap,
         email: email,
         password: password,
+        confirmpassword: confirmpassword,
     };
     return data
 }
 
 // Login
 export function PostLogin() {
-    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
     const data = {
-        username: username,
+        email: email,
         password: password,
     };
     return data;
 }
 
-// alert post 
-export function AlertPost(value) {
-    Swal.fire({
-        icon: 'success',
-        title: 'Daftar Berhasil',
-        text: 'Anda telah berhasil daftar!',
-    });
-    window.location.href = "login.html"
+export function AlertPost(value){
+    alert(value.message + "\nRegistrasi Berhasil")
+    window.location.href= "login.html"
 }
+
+// // alert post 
+// export function AlertPost(value) {
+//     Swal.fire({
+//         icon: 'success',
+//         title: 'Daftar Berhasil',
+//         text: 'Anda telah berhasil daftar!',
+//     });
+//     window.location.href = "login.html"
+// }
 
 // Response Post Login
 function ResponsePostLogin(response) {
     if (response && response.token) {
         // console.log("Token User:", response.token);
         setCookieWithExpireHour("Login", response.token, 2);
-        window.location.href = '';
-        Swal.fire({
-            icon: 'success',
-            title: 'Masuk Berhasil',
-            text: 'Anda telah berhasil masuk!',
-        });
+        window.location.href = 'chat.html';
+        alert("Selamat Datang")
     } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Gagal Masuk',
-            text: 'Username atau Kata Sandi tidak valid. Silakan coba lagi.',
-        });
+        alert('Login gagal. Silakan coba lagi.');
     }
 }
 
