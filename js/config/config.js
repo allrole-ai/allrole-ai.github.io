@@ -22,15 +22,15 @@ export function GetDataForm() {
     const namalengkap = document.querySelector("#namalengkap").value;
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
-    const confirmpassword = document.querySelector("#confirmpassword").value;
+    const confirmpass = document.querySelector("#confirmpass").value;
 
     const data = {
         namalengkap: namalengkap,
         email: email,
         password: password,
-        confirmpassword: confirmpassword,
+        confirmpass: confirmpass,
     };
-    return data
+    return data;
 }
 
 // Login
