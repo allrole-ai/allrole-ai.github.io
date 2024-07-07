@@ -6,7 +6,7 @@ import {
 // Token
 export function getTokenFromAPI() {
     const tokenUrl =
-        "";
+        "https://asia-southeast2-allrole.cloudfunctions.net/allrole/login";
     fetch(tokenUrl)
         .then((response) => response.json())
         .then((tokenData) => {
