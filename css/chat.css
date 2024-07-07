@@ -130,16 +130,71 @@ body, html {
   padding-bottom: 60px; /* Add padding to bottom for chat input container */
 }
 
-.chat-container.full-width {
-  margin-left: 0; /* Set margin to 0 when sidebar is hidden */
-}
-
 .chat-box {
   flex-grow: 1;
   overflow-y: auto;
   padding: 10px;
   background: #f8f9fa;
   transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 75%;
+  word-wrap: break-word;
+  color: black; 
+}
+
+.message.user {
+  background-color: #dcf8c6; /* Warna latar belakang untuk pesan pengguna */
+  text-align: right; /* Teks pesan pengguna diatur ke kanan */
+  margin-left: auto; /* Memastikan pesan pengguna berada di sebelah kanan */
+  border-radius: 10px; /* Agar bubble pesan pengguna berbentuk bulat di sudut */
+  color: #333; /* Warna teks pesan pengguna di mode terang */
+  padding: 8px 12px; /* Padding untuk memisahkan teks dari tepi bubble */
+}
+
+.message.bot {
+  background-color: #fff; /* Warna latar belakang untuk pesan bot */
+  border: 1px solid #ccc; /* Garis border untuk bubble pesan bot */
+  align-self: flex-start; /* Posisi bubble pesan bot diatur ke kiri */
+  margin-right: auto; /* Memastikan pesan bot berada di sebelah kanan */
+  border-radius: 10px; /* Agar bubble pesan bot berbentuk bulat di sudut */
+  color: #333; /* Warna teks pesan bot di mode terang */
+  padding: 8px 12px; /* Padding untuk memisahkan teks dari tepi bubble */
+}
+
+/* Mode gelap */
+body.dark-mode {
+  background-color: #333; /* Warna latar belakang untuk mode gelap */
+  color: #fff; /* Warna teks untuk mode gelap */
+}
+
+/* Tambahan untuk mode gelap */
+.message.user.dark-mode {
+  background-color: #4CAF50; /* Warna latar belakang pesan pengguna di mode gelap */
+  color: #fff; /* Warna teks pesan pengguna di mode gelap */
+}
+
+.message.bot.dark-mode {
+  background-color: #555; /* Warna latar belakang pesan bot di mode gelap */
+  color: #fff; /* Warna teks pesan bot di mode gelap */
+}
+
+
+.chat-input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+}
+
+.loading-indicator {
+  display: none;
+  text-align: center;
+  margin: 10px auto;
 }
 
 .chat-box .message {
