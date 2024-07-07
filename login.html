@@ -50,21 +50,21 @@
             <div class="col align-items-center flex-col sign-up">
                 <div class="form-wrapper align-items-center">
                     <div class="form sign-up">
-                        <form class="mt-6" id="formlogin">
+                        <form class="mt-6" id="formregis">
                             <div class="input-group">
                                 <i class='bx bxs-user'></i>
-                                <input type="text" placeholder="Username" required>
+                                <input type="username" id="username" placeholder="Username" required>
                             </div>
                             <div class="input-group">
                                 <i class='bx bx-mail-send'></i>
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" id="email" placeholder="Email" required>
                             </div>
                             <div class="input-group">
                                 <i class='bx bxs-lock-alt'></i>
-                                <input type="password" placeholder="Password" required>
+                                <input type="password" id="password" placeholder="Password" required>
                             </div>
-                            <button class="bg-blue-500 text-white py-2 px-4 rounded" type="submit" id="button">Sign
-                                up</button>
+                            <input class="bg-blue-500 text-white py-2 px-4 rounded form-control-submit" type="submit"
+                                value="Sign up" id="button">
                             <p>
                                 <span>Already have an account?</span>
                                 <b onclick="toggleForm('sign-in')" class="pointer">Sign in here</b>
@@ -78,23 +78,25 @@
             <div class="col align-items-center flex-col sign-in">
                 <div class="form-wrapper align-items-center">
                     <div class="form sign-in">
-                        <div class="input-group">
-                            <i class='bx bxs-user'></i>
-                            <input type="text" placeholder="Username" required>
-                        </div>
-                        <div class="input-group">
-                            <i class='bx bxs-lock-alt'></i>
-                            <input type="password" placeholder="Password" required>
-                        </div>
-                        <button class="bg-blue-500 text-white py-2 px-4 rounded" type="submit" id="button">Sign
-                            in</button>
-                        <p>
-                            <b>Forgot password?</b>
-                        </p>
-                        <p>
-                            <span>Don't have an account?</span>
-                            <b onclick="toggleForm('sign-up')" class="pointer">Sign up here</b>
-                        </p>
+                        <form class="mt-6" id="formlogin">
+                            <div class="input-group">
+                                <i class='bx bxs-user'></i>
+                                <input type="username" id="username" placeholder="Username" required>
+                            </div>
+                            <div class="input-group">
+                                <i class='bx bxs-lock-alt'></i>
+                                <input type="password" id="password" placeholder="Password" required>
+                            </div>
+                            <input class="bg-blue-500 text-white py-2 px-4 rounded form-control-submit" type="submit"
+                                value="Sign in" id="button-login">
+                            <p>
+                                <b>Forgot password?</b>
+                            </p>
+                            <p>
+                                <span>Don't have an account?</span>
+                                <b onclick="toggleForm('sign-up')" class="pointer">Sign up here</b>
+                            </p>
+                        </form>
                     </div>
                 </div>
             </div>
