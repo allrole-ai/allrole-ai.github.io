@@ -60,17 +60,28 @@ export function AlertPost(value){
 //     window.location.href = "login.html"
 // }
 
-// Response Post Login
-function ResponsePostLogin(response) {
-    if (response && response.token) {
-        // console.log("Token User:", response.token);
-        setCookieWithExpireHour("Login", response.token, 2);
+export function ResponsePostLogin(result) {
+    if (result && result.token) {
+        setCookieWithExpireHour("Login", result.token, 2);
         window.location.href = 'chat.html';
-        alert("Selamat Datang")
+        alert("Selamat Datang");
     } else {
         alert('Login gagal. Silakan coba lagi.');
     }
 }
+
+
+// // Response Post Login
+// function ResponsePostLogin(result) {
+//     if (result && result.token) {
+//         // console.log("Token User:", result.token);
+//         setCookieWithExpireHour("Login", result.token, 2);
+//         window.location.href = 'chat.html';
+//         alert("Selamat Datang")
+//     } else {
+//         alert('Login gagal. Silakan coba lagi.');
+//     }
+// }
 
 export function ResponsePost(result) {
     AlertPost(result);
