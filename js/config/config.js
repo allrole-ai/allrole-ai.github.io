@@ -33,7 +33,7 @@ export function GetDataForm() {
     return data;
 }
 
-// Login
+//Login
 export function PostLogin() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -42,6 +42,7 @@ export function PostLogin() {
         email: email,
         password: password,
     };
+    console.log("Data yang dikirim untuk login:", data);
     return data;
 }
 
@@ -70,18 +71,6 @@ export function ResponsePostLogin(result) {
     }
 }
 
-
-// // Response Post Login
-// function ResponsePostLogin(result) {
-//     if (result && result.token) {
-//         // console.log("Token User:", result.token);
-//         setCookieWithExpireHour("Login", result.token, 2);
-//         window.location.href = 'chat.html';
-//         alert("Selamat Datang")
-//     } else {
-//         alert('Login gagal. Silakan coba lagi.');
-//     }
-// }
 
 export function ResponsePost(result) {
     AlertPost(result);

@@ -11,6 +11,11 @@
     <link href="css/login.css" rel="stylesheet">
     <link rel="icon" href="images/favicon.png">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <!-- script -->
     <style>
         /* CSS for Navbar */
         .navbar {
@@ -38,15 +43,15 @@
     <!-- Navbar -->
     <div class="navbar">
         <a class="active" href="index.html">Home</a>
-        <a href="#" onclick="toggleForm('sign-in')">Sign In</a>
-        <a href="#" onclick="toggleForm('sign-up')">Sign Up</a>
+        <a href="login.html" onclick="toggleForm('sign-in')">Sign In</a>
+        <a href="register.html" onclick="toggleForm('sign-up')">Sign Up</a>
     </div>
 
     <!-- Container for Forms -->
     <div id="container" class="container sign-in">
         <!-- FORM SECTION -->
         <div class="row">
-            <!-- SIGN UP -->
+            <!-- SIGN UP
             <div class="col align-items-center flex-col sign-up">
                 <div class="form-wrapper align-items-center">
                     <div class="form sign-up">
@@ -76,7 +81,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- SIGN IN -->
             <div class="col align-items-center flex-col sign-in">
@@ -85,11 +90,11 @@
                         <form class="mt-6" id="formlogin">
                             <div class="input-group">
                                 <i class='bx bxs-user'></i>
-                                <input type="email" id="email" placeholder="masukan E-mail" required>
+                                <input type="email" id="email2" placeholder="masukan E-mail" required>
                             </div>
                             <div class="input-group">
                                 <i class='bx bxs-lock-alt'></i>
-                                <input type="password" id="password" placeholder="Password" required>
+                                <input type="password" id="password2" placeholder="Password" required>
                             </div>
                             <input class="bg-blue-500 text-white py-2 px-4 rounded form-control-submit" type="submit"
                                 id="button-login">
@@ -123,11 +128,13 @@
             </div>
         </div>
     </div>
-    <script src=""></script>
-    <script src="js/login.js"></script>
-    <script type="module" src="./js/controller/controllerLogin.js"></script>
+    <!-- <script src="js/login.js"></script> -->
+    <!-- <script type="module" src="./js/controller/controllerLogin.js"></script>
     <script type="module" src="./js/config/config.js"></script>
-    <script type="module" src="./js/controller/controller.js"></script>
+    <script type="module" src="./js/controller/controller.js"></script> -->
+    <script type="module" src="js/login/login.js"></script>
+    <script type="module" src="js/login/register.js"></script>
+    <script type="module" src="js/component/component.js"></script>
 </body>
 
 </html>
