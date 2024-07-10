@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         let data = PostLogin();
-        postWithBearer(URLLogin, 'Authorization', 'Bearer ' + token, data, ResponseLogin);
+        postWithBearer(URLLogin, token, data, ResponseLogin);
     });
 });
