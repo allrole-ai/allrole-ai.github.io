@@ -1,12 +1,8 @@
-import {
-    setCookieWithExpireHour
-} from "https://jscroot.github.io/cookie/croot.js";
-
+import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
 
 // Token
 export function getTokenFromAPI() {
-    const tokenUrl =
-        "https://asia-southeast2-allrole.cloudfunctions.net/allrole/login";
+    const tokenUrl = "https://asia-southeast2-allrole.cloudfunctions.net/allrole/login";
     fetch(tokenUrl)
         .then((response) => response.json())
         .then((tokenData) => {
@@ -33,33 +29,22 @@ export function GetDataForm() {
     return data;
 }
 
-//Login
+// Login
 export function PostLogin() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById("emailLogin").value;
+    const password = document.getElementById("passwordLogin").value;
 
     const data = {
         email: email,
         password: password,
     };
-    console.log("Data yang dikirim untuk login:", data);
     return data;
 }
 
 export function AlertPost(value){
-    alert(value.message + "\nRegistrasi Berhasil")
-    window.location.href= "login.html"
+    alert(value.message + "\nRegistrasi Berhasil");
+    window.location.href = "login.html";
 }
-
-// // alert post 
-// export function AlertPost(value) {
-//     Swal.fire({
-//         icon: 'success',
-//         title: 'Daftar Berhasil',
-//         text: 'Anda telah berhasil daftar!',
-//     });
-//     window.location.href = "login.html"
-// }
 
 export function ResponsePostLogin(result) {
     if (result && result.token) {
@@ -70,7 +55,6 @@ export function ResponsePostLogin(result) {
         alert('Login gagal. Silakan coba lagi.');
     }
 }
-
 
 export function ResponsePost(result) {
     AlertPost(result);
