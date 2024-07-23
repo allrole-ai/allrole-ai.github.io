@@ -20,3 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Fungsi untuk mengirim data login ke server dan mengembalikan responsnya
+function postWithBearer(url, token, data, callback) {
+    return fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => callback(data))
+    .catch(error => { throw error });
+}
