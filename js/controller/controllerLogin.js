@@ -5,8 +5,9 @@ import {token, URLLogin} from "../template/template.js";
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formlogin");
     form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        let data = PostLogin();
-        postWithBearer(URLLogin, token, data, ResponseLogin);
+        event.preventDefault(); // Mencegah form melakukan submit default
+        let data = PostLogin(); // Mengambil data login dari fungsi PostLogin
+        // Mengirim data login ke server menggunakan token untuk otentikasi
+        postWithBearer(URLLogin, token, data, ResponseLogin); 
     });
 });
