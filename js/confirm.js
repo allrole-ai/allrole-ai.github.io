@@ -39,8 +39,3 @@ function handleConfirmationResponse(response) {
     }
 }
 
-// Contoh penggunaan fungsi confirmAnswer
-document.getElementById("confirmButton").addEventListener("click", function () {
-    const modelAnswer = "jawaban dari model"; // Gantilah ini dengan jawaban aktual dari model
-    confirmAnswer(modelAnswer); // Memanggil fungsi untuk mengonfirmasi jawaban
-});
