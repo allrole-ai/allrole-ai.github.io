@@ -35,22 +35,3 @@ function postWithBearer(url, token, data, callback) {
     .catch(error => { throw error });
 }
 
-// Fungsi untuk menangani respons dari server setelah login
-function checkLogin(response) {
-    if (response.success) {
-        // Jika respons sukses, misalnya status HTTP 200
-        // Logika untuk menangani login berhasil, misalnya menyimpan token dan mengarahkan pengguna ke halaman utama
-        console.log("Login berhasil:", response.data);
-        // Simpan token ke localStorage atau sessionStorage
-        localStorage.setItem('authToken', response.data.token);
-        // Arahkan pengguna ke halaman dashboard
-        window.location.href = "/dashboard.html";
-    } else {
-        // Jika respons gagal, misalnya status HTTP 401 atau 403
-        // Logika untuk menangani login gagal, misalnya menampilkan pesan kesalahan kepada pengguna
-        console.error("Login gagal:", response.message);
-        // Menampilkan pesan kesalahan di halaman login
-        document.getElementById("errorMessage").innerText = "Login gagal: " + response.message;
-    }
-}
-
