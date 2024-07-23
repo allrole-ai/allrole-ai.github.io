@@ -39,6 +39,25 @@ function handleConfirmationResponse(response) {
     }
 }
 
+
+
+// Fungsi untuk menangani respons dari server setelah konfirmasi jawaban
+function handleConfirmationResponse(response) {
+    if (response.success) {
+        // Jika respons sukses, misalnya status HTTP 200
+        // Logika untuk menangani konfirmasi berhasil
+        console.log("Konfirmasi berhasil:", response.data);
+        // Menampilkan pesan sukses di halaman
+        document.getElementById("successMessage").innerText = "Konfirmasi berhasil: " + response.message;
+    } else {
+        // Jika respons gagal, misalnya status HTTP 400 atau 500
+        // Logika untuk menangani konfirmasi gagal
+        console.error("Konfirmasi gagal:", response.message);
+        // Menampilkan pesan kesalahan di halaman
+        document.getElementById("errorMessage").innerText = "Konfirmasi gagal: " + response.message;
+    }
+}
+
 // Contoh penggunaan fungsi confirmAnswer
 document.getElementById("confirmButton").addEventListener("click", function () {
     const modelAnswer = "jawaban dari model"; // Gantilah ini dengan jawaban aktual dari model
