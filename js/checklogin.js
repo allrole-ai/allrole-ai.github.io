@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 checkLogin(response); // Memanggil fungsi checkLogin untuk menangani respons dari server
             })
             .catch(error => {
-                console.error("Login gagal:", error);
+                console.error("Login gagal:", error); // Menangani kesalahan saat mengirim data login ke server
                 // Menampilkan pesan kesalahan di halaman login
                 document.getElementById("errorMessage").innerText = "Login gagal: " + error.message;
             });
@@ -52,4 +52,11 @@ function checkLogin(response) {
         // Menampilkan pesan kesalahan di halaman login
         document.getElementById("errorMessage").innerText = "Login gagal: " + response.message;
     }
+}
+
+// Fungsi ResponseLogin untuk menangani respons dari server setelah login
+// Parameter response berisi data yang dikembalikan oleh server setelah proses login
+function ResponseLogin(response) {
+    // Logika yang akan dijalankan setelah menerima respons dari server
+    checkLogin(response); // Memanggil fungsi checkLogin untuk menangani respons dari server
 }
