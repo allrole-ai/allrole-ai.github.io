@@ -23,14 +23,3 @@ async function confirmAnswer(modelAnswer) {
         document.getElementById("errorMessage").innerText = "Konfirmasi gagal: " + error.message;
     }
 }
-
-// Fungsi untuk menangani respons dari server setelah konfirmasi jawaban
-function handleConfirmationResponse(response) {
-    if (response.success) {
-        console.log("Konfirmasi berhasil:", response.data);
-        document.getElementById("successMessage").innerText = "Konfirmasi berhasil: " + response.message;
-    } else {
-        console.error("Konfirmasi gagal:", response.message);
-        document.getElementById("errorMessage").innerText = "Konfirmasi gagal: " + response.message;
-    }
-}
