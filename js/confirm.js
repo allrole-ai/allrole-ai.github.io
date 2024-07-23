@@ -14,10 +14,9 @@ function confirmAnswer(modelAnswer) {
         body: JSON.stringify(data)
     })
     .then(response => response.json()) // Mengonversi respons ke format JSON
-    .then(data => handleConfirmationResponse(data)) // Menangani respons dari server
+    .then(handleConfirmationResponse) // Menangani respons dari server
     .catch(error => {
         console.error("Konfirmasi gagal:", error); // Menangani kesalahan saat mengirim data ke server
-        // Menampilkan pesan kesalahan di halaman
         document.getElementById("errorMessage").innerText = "Konfirmasi gagal: " + error.message;
     });
 }
@@ -25,17 +24,10 @@ function confirmAnswer(modelAnswer) {
 // Fungsi untuk menangani respons dari server setelah konfirmasi jawaban
 function handleConfirmationResponse(response) {
     if (response.success) {
-        // Jika respons sukses, misalnya status HTTP 200
-        // Logika untuk menangani konfirmasi berhasil
         console.log("Konfirmasi berhasil:", response.data);
-        // Menampilkan pesan sukses di halaman
         document.getElementById("successMessage").innerText = "Konfirmasi berhasil: " + response.message;
     } else {
-        // Jika respons gagal, misalnya status HTTP 400 atau 500
-        // Logika untuk menangani konfirmasi gagal
         console.error("Konfirmasi gagal:", response.message);
-        // Menampilkan pesan kesalahan di halaman
         document.getElementById("errorMessage").innerText = "Konfirmasi gagal: " + response.message;
     }
 }
-
