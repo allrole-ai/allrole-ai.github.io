@@ -1,16 +1,16 @@
-
-.testimonials {
-    background-color: #eeeeee;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.testimonial {
-    margin: 20px auto;
-    width: 60%;
-    font-style: italic;
-}
-
+/* Testimonials Design Update */
+.testimonials .testimonial {
+    border: 2px solid #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: transform 0.3s;
+  }
+  
+  .testimonials .testimonial:hover {
+    transform: scale(1.05);
+  }
+  
 
 .faq {
     padding: 50px 20px;
