@@ -138,5 +138,16 @@
     border-radius: 5px;
 }
 
+.video {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
 
 
