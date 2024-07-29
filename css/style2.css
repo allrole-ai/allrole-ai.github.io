@@ -158,22 +158,6 @@ video {
     font-size: 1.5em;
 }
 
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    display: none;
-}
-
-.back-to-top:hover {
-    background-color: #0056b3;
-}
 
 
 
