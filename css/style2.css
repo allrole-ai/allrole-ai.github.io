@@ -11,14 +11,26 @@
     transform: scale(1.05);
   }
   
-
-.faq {
-    padding: 50px 20px;
-}
-
-.question {
-    margin-bottom: 20px;
-}
+/* FAQ Accordion Styles */
+.accordion-content {
+    display: none;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .accordion-header {
+    background-color: #f7f7f7;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .accordion-header:focus {
+    outline: none;
+  }
+  
 
 /* Video Background Style */
 #hero-video {
