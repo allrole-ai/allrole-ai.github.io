@@ -32,3 +32,12 @@ function countdownTimer() {
 
 const timerInterval = setInterval(countdownTimer, 1000);
 
+
+window.addEventListener('load', () => {
+    document.getElementById('loadingSpinner').style.display = 'none';
+});
+
+window.addEventListener('beforeunload', () => {
+    document.getElementById('loadingSpinner').style.display = 'block';
+});
+
