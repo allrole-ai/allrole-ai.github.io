@@ -33,4 +33,19 @@ function countdownTimer() {
 const timerInterval = setInterval(countdownTimer, 1000);
 
 
+function initMap() {
+    const location = { lat: -34.397, lng: 150.644 };
+    const map = new google.maps.Map(document.getElementById("googleMap"), {
+        zoom: 8,
+        center: location
+    });
+    const marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
+}
+
+// Include Google Maps API script in your HTML
+// <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+
 
