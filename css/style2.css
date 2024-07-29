@@ -17,3 +17,17 @@
 .cta-button:hover {
     background-color: #cc5200;
 }
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.feature {
+    width: 30%;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
