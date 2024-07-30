@@ -44,3 +44,8 @@ nav ul li {
     display: inline;
     margin: 0 10px;
 }
+/* Navigation Link Style */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
