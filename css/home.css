@@ -64,3 +64,7 @@ section h2 {
     margin-bottom: 10px;
     font-size: 1.5rem;
 }
+/* Section Paragraph Styles */
+section p {
+    margin-bottom: 10px;
+}
