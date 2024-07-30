@@ -84,3 +84,9 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+/* Container Class */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
