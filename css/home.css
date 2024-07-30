@@ -34,3 +34,8 @@ nav {
     padding: 10px 0;
     text-align: center;
 }
+/* Navigation List Style */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
