@@ -59,3 +59,8 @@ section {
     margin: 20px 0;
     background-color: #fff;
 }
+/* Section Title Styles */
+section h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
