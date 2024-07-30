@@ -11,3 +11,7 @@ body {
     color: #333;
     line-height: 1.6;
 }
+/* Body Margin */
+body {
+    margin: 20px;
+}
