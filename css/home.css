@@ -39,3 +39,8 @@ nav ul {
     list-style: none;
     padding: 0;
 }
+/* Navigation List Item Style */
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
