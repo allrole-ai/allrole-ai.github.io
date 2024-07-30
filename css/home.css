@@ -103,3 +103,7 @@ button {
     border: none;
     cursor: pointer;
 }
+/* Button Hover Effect */
+button:hover {
+    background-color: #555;
+}
