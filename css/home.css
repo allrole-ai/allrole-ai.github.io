@@ -27,3 +27,10 @@ body {
     margin: 0;
     font-size: 2.5rem;
 }
+/* Navigation Style */
+nav {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
