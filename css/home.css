@@ -95,3 +95,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
