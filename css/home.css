@@ -141,4 +141,7 @@ btn-outline-sm {
 .cards-1 .h2-heading {
 	margin-bottom: 1.125rem;
 }
-
+.cards-1 .p-heading {
+	margin-bottom: 4rem;
+	text-align: center;
+}
