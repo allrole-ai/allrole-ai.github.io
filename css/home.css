@@ -145,3 +145,10 @@ btn-outline-sm {
 	margin-bottom: 4rem;
 	text-align: center;
 }
+
+.cards-1 .card {
+	margin-bottom: 4rem;
+	border: none;
+	border-radius: 6px;
+}
+
