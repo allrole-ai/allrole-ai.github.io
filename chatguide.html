@@ -3,87 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Respon dan Catatan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header, footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        header h1, footer p {
-            margin: 0;
-        }
-        nav {
-            background-color: #444;
-            overflow: hidden;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px 20px;
-            display: block;
-        }
-        nav ul li a:hover {
-            background-color: #007BFF;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .section textarea, .section input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-top: 10px;
-        }
-        .section textarea {
-            height: 100px;
-            resize: none;
-        }
-        .section button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            font-size: 14px;
-            color: #fff;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .section button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
+
 <body>
 
 <header>
@@ -120,10 +40,11 @@
 
     <div id="guidance" class="section">
         <h2>Panduan Penggunaan Chatbot</h2>
-        <input type="text" placeholder="Judul Panduan" />
-        <textarea placeholder="Tulis panduan penggunaan chatbot di sini..."></textarea>
+        <input type="text" placeholder="Judul Panduan" id="guidance-title" />
+        <textarea placeholder="Tulis panduan penggunaan chatbot di sini..." id="guidance-content"></textarea>
         <br>
-        <button>Kirim Panduan</button>
+        <button onclick="submitGuidance()">Kirim Panduan</button>
+        <p id="guidance-response" style="color: green; display: none;">Panduan telah dikirim. Terima kasih atas kontribusi Anda!</p>
     </div>
 
     <div id="tentang" class="section">
@@ -133,13 +54,36 @@
 
     <div id="kontak" class="section">
         <h2>Kontak</h2>
-        <p>Hubungi kami di: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>Hubungi kami di: <a href="allroleaiinfo@gmail.com">info@example.com</a></p>
     </div>
 </div>
 
 <footer>
     <p>&copy; 2024 Respon dan Catatan. Hak cipta dilindungi.</p>
 </footer>
+
+<script>
+    function submitGuidance() {
+        // Mengambil nilai dari input
+        var title = document.getElementById('guidance-title').value;
+        var content = document.getElementById('guidance-content').value;
+
+        // Validasi input (contoh sederhana)
+        if (title === '' || content === '') {
+            alert('Mohon isi semua kolom sebelum mengirim.');
+            return;
+        }
+
+        // Tampilkan pesan konfirmasi
+        document.getElementById('guidance-response').style.display = 'block';
+
+        // Reset form (opsional)
+        document.getElementById('guidance-title').value = '';
+        document.getElementById('guidance-content').value = '';
+
+        // Anda bisa menambahkan kode untuk mengirim data ini ke server di sini
+    }
+</script>
 
 </body>
 </html>
