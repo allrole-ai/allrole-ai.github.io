@@ -122,3 +122,8 @@ btn-outline-sm {
 	transition: all 0.2s;
 }
 
+.btn-outline-sm:hover {
+	background-color: #161223;
+	color: #ffffff;
+	text-decoration: none;
+}
