@@ -88,7 +88,7 @@
 
 <header>
     <h1>Respon dan Catatan</h1>
-    <input type="text" placeholder="Cari di sini..." style="width: 60%; padding: 10px; margin-top: 10px; border-radius: 4px; border: 1px solid #ccc;">
+    <input type="text" placeholder="Cari di sini..." style="width: 60%; padding: 10px; margin-top: 10px; border-radius: 4px; border: 1px solid #ccc;" id="searchBar" onkeyup="autoResponse()">
 </header>
 
 <nav>
@@ -134,7 +134,7 @@
 
     <div id="kontak" class="section">
         <h2>Kontak</h2>
-        <p>Hubungi kami di: <a href="allroleai_info@gmail.com">allroleai_info@gmail.com</a></p>
+        <p>Hubungi kami di: <a href="mailto:allroleai_info@gmail.com">allroleai_info@gmail.com</a></p>
     </div>
 </div>
 
@@ -143,6 +143,27 @@
 </footer>
 
 <script>
+    function autoResponse() {
+        var searchBar = document.getElementById('searchBar');
+        var responseText = searchBar.value.toLowerCase();
+        var response = '';
+
+        if (responseText.includes('keluhan')) {
+            response = 'Baik, kami akan perbaiki.';
+        } else if (responseText.includes('pujian')) {
+            response = 'Terima kasih, kami akan terus berkembang.';
+        } else if (responseText.includes('saran')) {
+            response = 'Terima kasih atas saran Anda, kami akan mempertimbangkannya.';
+        } else if (responseText.includes('bantuan')) {
+            response = 'Kami siap membantu Anda. Silakan beri tahu apa yang Anda butuhkan.';
+        } else {
+            response = 'Terima kasih atas tanggapan Anda.';
+        }
+
+        // Tampilkan respon di tempat yang sesuai (misal, alert atau elemen di halaman)
+        alert(response);
+    }
+
     function submitGuidance() {
         // Mengambil nilai dari input
         var title = document.getElementById('guidance-title').value;
