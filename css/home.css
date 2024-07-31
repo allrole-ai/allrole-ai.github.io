@@ -152,3 +152,7 @@ btn-outline-sm {
 	border-radius: 6px;
 }
 
+.cards-1 .card-body {
+	padding: 0;
+}
+
