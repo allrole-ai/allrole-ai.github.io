@@ -132,3 +132,10 @@ btn-outline-sm {
 	position: relative;
 	margin-bottom: 1.25rem;
 }
+
+.cards-1 {
+	padding-top: 9.125rem;
+	padding-bottom: 5.25rem;
+	text-align: center;
+}
+
