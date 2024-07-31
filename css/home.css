@@ -127,3 +127,8 @@ btn-outline-sm {
 	color: #ffffff;
 	text-decoration: none;
 }
+
+.form-group {
+	position: relative;
+	margin-bottom: 1.25rem;
+}
