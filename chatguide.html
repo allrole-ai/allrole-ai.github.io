@@ -82,6 +82,11 @@
         .section button:hover {
             background-color: #0056b3;
         }
+        .response-message {
+            color: green;
+            display: none;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -89,6 +94,7 @@
 <header>
     <h1>Respon dan Catatan</h1>
     <input type="text" placeholder="Cari di sini..." style="width: 60%; padding: 10px; margin-top: 10px; border-radius: 4px; border: 1px solid #ccc;" id="searchBar" onkeyup="autoResponse()">
+    <p id="search-response" class="response-message"></p>
 </header>
 
 <nav>
@@ -104,18 +110,20 @@
 <div class="container">
     <div id="respon" class="section">
         <h2>Respon</h2>
-        <input type="text" placeholder="Judul Respon" />
-        <textarea placeholder="Tulis respon Anda di sini..."></textarea>
+        <input type="text" placeholder="Judul Respon" id="respon-title"/>
+        <textarea placeholder="Tulis respon Anda di sini..." id="respon-content"></textarea>
         <br>
-        <button>Kirim Respon</button>
+        <button onclick="submitResponse()">Kirim Respon</button>
+        <p id="response-message" class="response-message">Respon Anda telah dikirim. Terima kasih!</p>
     </div>
 
     <div id="catatan" class="section">
         <h2>Catatan</h2>
-        <input type="text" placeholder="Judul Catatan" />
-        <textarea placeholder="Tulis catatan Anda di sini..."></textarea>
+        <input type="text" placeholder="Judul Catatan" id="catatan-title"/>
+        <textarea placeholder="Tulis catatan Anda di sini..." id="catatan-content"></textarea>
         <br>
-        <button>Simpan Catatan</button>
+        <button onclick="saveNote()">Simpan Catatan</button>
+        <p id="note-message" class="response-message">Catatan Anda telah disimpan.</p>
     </div>
 
     <div id="guidance" class="section">
@@ -124,7 +132,7 @@
         <textarea placeholder="Tulis panduan penggunaan chatbot di sini..." id="guidance-content"></textarea>
         <br>
         <button onclick="submitGuidance()">Kirim Panduan</button>
-        <p id="guidance-response" style="color: green; display: none;">Panduan telah dikirim. Terima kasih atas kontribusi Anda!</p>
+        <p id="guidance-response" class="response-message">Panduan telah dikirim. Terima kasih atas kontribusi Anda!</p>
     </div>
 
     <div id="tentang" class="section">
@@ -160,16 +168,54 @@
             response = 'Terima kasih atas tanggapan Anda.';
         }
 
-        // Tampilkan respon di tempat yang sesuai (misal, alert atau elemen di halaman)
-        alert(response);
+        // Tampilkan respon di elemen yang sesuai
+        var responseElement = document.getElementById('search-response');
+        responseElement.textContent = response;
+        responseElement.style.display = 'block';
+    }
+
+    function submitResponse() {
+        var title = document.getElementById('respon-title').value;
+        var content = document.getElementById('respon-content').value;
+
+        if (title === '' || content === '') {
+            alert('Mohon isi semua kolom sebelum mengirim.');
+            return;
+        }
+
+        // Tampilkan pesan konfirmasi
+        document.getElementById('response-message').style.display = 'block';
+
+        // Reset form
+        document.getElementById('respon-title').value = '';
+        document.getElementById('respon-content').value = '';
+
+        // Anda bisa menambahkan kode untuk mengirim data ini ke server di sini
+    }
+
+    function saveNote() {
+        var title = document.getElementById('catatan-title').value;
+        var content = document.getElementById('catatan-content').value;
+
+        if (title === '' || content === '') {
+            alert('Mohon isi semua kolom sebelum menyimpan.');
+            return;
+        }
+
+        // Tampilkan pesan konfirmasi
+        document.getElementById('note-message').style.display = 'block';
+
+        // Reset form
+        document.getElementById('catatan-title').value = '';
+        document.getElementById('catatan-content').value = '';
+
+        // Anda bisa menambahkan kode untuk menyimpan data ini ke server di sini
     }
 
     function submitGuidance() {
-        // Mengambil nilai dari input
         var title = document.getElementById('guidance-title').value;
         var content = document.getElementById('guidance-content').value;
 
-        // Validasi input (contoh sederhana)
         if (title === '' || content === '') {
             alert('Mohon isi semua kolom sebelum mengirim.');
             return;
@@ -178,7 +224,7 @@
         // Tampilkan pesan konfirmasi
         document.getElementById('guidance-response').style.display = 'block';
 
-        // Reset form (opsional)
+        // Reset form
         document.getElementById('guidance-title').value = '';
         document.getElementById('guidance-content').value = '';
 
