@@ -171,3 +171,11 @@ btn-outline-sm {
 	margin-bottom: 1.5rem;
 }
 
+.split p {
+	margin-bottom: 2.25rem;
+}
+
+.split p:last-of-type {
+	margin-bottom: 0;
+}
+
