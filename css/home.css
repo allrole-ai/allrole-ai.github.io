@@ -156,3 +156,9 @@ btn-outline-sm {
 	padding: 0;
 }
 
+.split .area-1 {
+	height: 430px;
+	background: url('../images/details-background.jpg') center center no-repeat;
+	background-size: cover;
+}
+
